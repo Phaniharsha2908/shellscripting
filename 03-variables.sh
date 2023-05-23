@@ -37,3 +37,11 @@ echo ADD = $ADD
 
 ##In Linux shell script people from unix/Linux back ground considers the variables names will all CAPS
 #EXAMPLE: COURSE_NAME
+
+
+##Arrays
+
+c=(10 20 30 small large)
+echo First value of Array = ${c[0]}
+echo Second value of Array = ${c[1]}
+echo All the values of Array = ${#c[*]}
