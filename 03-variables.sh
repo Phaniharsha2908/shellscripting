@@ -17,7 +17,14 @@ echo Today date is $DATE
 
 DATE=$(date +%F)
 echo Today date is $DATE
+
+#Arthematic expression
 #var=$((expression))
 
 #example
 
+
+x=10
+y=20
+ADD=$(($x+$y))
+echo ADD = $ADD
