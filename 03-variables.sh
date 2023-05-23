@@ -28,3 +28,12 @@ x=10
 y=20
 ADD=$(($x+$y))
 echo ADD = $ADD
+
+#Variables names can have only characters a-z.A-Z,0-9,_(underscore)
+#special characters are not allowed
+#Avariable should not start with a number and it can start with a underscore
+#Variables by default will not have any data types.
+#As a user you should know that what data would come, since there is no data types.
+
+##In Linux shell script people from unix/Linux back ground considers the variables names will all CAPS
+#EXAMPLE: COURSE_NAME
