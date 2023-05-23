@@ -39,6 +39,7 @@ echo ADD = $ADD
 #EXAMPLE: COURSE_NAME
 
 
+
 ##Arrays
 
 c=(10 20 30 small large)
@@ -46,4 +47,11 @@ echo First value of Array = ${c[0]}
 echo Second value of Array = ${c[1]}
 echo Count of all the values of Array = ${#c[*]}
 echo All the values of Array = ${c[*]}
+
+##Local variables/Accessing env variables  or local properties
+
+echo Traning = ${TRANINING}
+#using export it will work other wise it will not work
+
+export TRANINING = DevOps
 
