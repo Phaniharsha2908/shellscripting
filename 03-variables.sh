@@ -44,4 +44,6 @@ echo ADD = $ADD
 c=(10 20 30 small large)
 echo First value of Array = ${c[0]}
 echo Second value of Array = ${c[1]}
-echo All the values of Array = ${#c[*]}
+echo Count of all the values of Array = ${#c[*]}
+echo All the values of Array = ${c[*]}
+
