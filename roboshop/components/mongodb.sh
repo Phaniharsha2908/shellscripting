@@ -16,6 +16,17 @@ print "start Mongodb"
 systemctl enable mongod && systemctl restart mongod &>>$LOG_FILE
 StatCheck $?
 
+print "Downoload Schema"
+curl -f -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>$LOG_FILE
+StatCheck $?
+
+print "Extract schema"
+cd /tmp/ && unzip mongodb.zip &>>$LOG_FILE
+StatCheck $?
+
+print "Load schema"
+cd mongodb-main && mongo < catalogue.js &>>$LOG_FILE && mongo < user.js &>>$LOG_FILE
+StatCheck $?
 
 
 
