@@ -40,7 +40,7 @@ Print "switching nginx directory"
 cd /usr/share/nginx/html/ >>$LOG_FILE
 
 print "Extracting Archive"
-unzip /tmp/frontend.zip $LOG_FILE && mv frontend-main/* . $LOG_FILE && mv static/* . >>$LOG_FILE
+unzip /tmp/frontend.zip >>$LOG_FILE && mv frontend-main/* . >>$LOG_FILE && mv static/*  . >>$LOG_FILE
 StatCheck $?
 
 print "Update roboshop configuration"
