@@ -1,19 +1,19 @@
 #!/bin/bash
 source components/common.sh
 print "Setup MongoDB repos"
-curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo >>&$LOG_FILE
+curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo  &>>$LOG_FILE
 StatCheck $?
 
 print "Install Mongo & Start Service"
-yum install -y mongodb-org >>&$LOG_FILE
+yum install -y mongodb-org &>>$LOG_FILE
 StatCheck $?
 
 print "Update mongodb Listen Address"
-sed -i -e 's/127.0.0.0/0.0.0.0/' /etc/mongod.conf >>&$LOG_FILE
+sed -i -e 's/127.0.0.0/0.0.0.0/' /etc/mongod.conf &>>$LOG_FILE
 StatCheck $?
 
 print "start Mongodb"
-systemctl enable mongod && systemctl start mongod >>&$LOG_FILE
+systemctl enable mongod && systemctl start mongod &>>$LOG_FILE
 StatCheck $?
 
 
