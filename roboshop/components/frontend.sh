@@ -16,13 +16,13 @@ StatCheck(){
 }
 
 print(){
-  echo -e "\e[36 $1 \e[0m"
+  echo -e "\e[36$1\e[0m"
 }
 
 LOG_FILE=/tmp/roboshop.log
 rm -rf $LOG_FILE
 print "Downloading Nginx"
-yum install nginx -y
+yum install nginx -y >>$LOG_FILE
 StatCheck $?
 
 print "Downloading Nginx content"
