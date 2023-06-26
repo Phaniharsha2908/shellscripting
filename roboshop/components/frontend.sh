@@ -36,7 +36,7 @@ print "Clean-up old content and extract it"
 rm -rf /usr/share/nginx/html/* >>$LOG_FILE
 StatCheck $?
 
-Print "switching nginx directory"
+print "switching nginx directory"
 cd /usr/share/nginx/html/ >>$LOG_FILE
 
 print "Extracting Archive"
