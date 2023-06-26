@@ -13,7 +13,7 @@ sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>$LOG_FILE
 StatCheck $?
 
 print "start Mongodb"
-systemctl enable mongod && systemctl start mongod &>>$LOG_FILE
+systemctl enable mongod && systemctl restart mongod &>>$LOG_FILE
 StatCheck $?
 
 
