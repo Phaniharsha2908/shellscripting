@@ -16,7 +16,7 @@ StatCheck(){
 }
 
 print(){
-  echo -e "\e[36$1\e[0m"
+  echo -e "\e[36m $1 \e[0m"
 }
 
 LOG_FILE=/tmp/roboshop.log
@@ -40,7 +40,7 @@ Print "switching nginx directory"
 cd /usr/share/nginx/html/ >>$LOG_FILE
 
 print "Extracting Archive"
-unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* . >>$LOG_FILE
+unzip /tmp/frontend.zip $LOG_FILE && mv frontend-main/* . $LOG_FILE && mv static/* . >>$LOG_FILE
 StatCheck $?
 
 print "Update roboshop configuration"
