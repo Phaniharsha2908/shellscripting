@@ -23,6 +23,8 @@ print(){
 
 LOG_FILE=/tmp/roboshop.log
 rm -rf $LOG_FILE
+
+
 print "Downloading Nginx"
 yum install nginx -y &>>$LOG_FILE
 StatCheck $?
