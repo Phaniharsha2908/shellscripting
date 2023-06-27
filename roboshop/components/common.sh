@@ -23,3 +23,5 @@ print(){
 
 LOG_FILE=/tmp/roboshop.log
 rm -rf $LOG_FILE
+
+APP_USER=roboshop
